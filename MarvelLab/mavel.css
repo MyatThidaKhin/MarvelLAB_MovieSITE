@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+:root{
+    --main-color:#034A78;
+    --hover-color:rgb(14, 166, 222);
+    --text-color:rgb(14, 14, 147);
+    --contain-color:rgb(227, 9, 9);
+    --body-color:#ffff;
+
+}
+/*Custom scroll bar*/
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #034A78;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+.bx{
+  cursor: pointer;  
+}
+body{
+    background: var(--body-color);
+    color:var(--text-color);
+}
+h2{
+    font-size: 35px;
+    font-weight: 800;
+}
+.section{
+    padding: 4.5rem 0 1.5rem;
+}
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    transition: 0.5s linear;
+    background: #034A78;
+}
+.logo{
+    margin-right: 8px auto;
+    width: 50%;
+    height: 50%;
+    padding-top: 3px;
+    padding-left: 8px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    font-weight: 800;
+    color: black;
+}
+.navbar a:hover {
+    background: azure;
+    border-radius: 0.2rem;
+    transition: 0.2s linear;
+}
+.navbar a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #A51518;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s all linear;
+}
+/*.navbar a::after{
+    width: 100%;
+}*/
+#menu-icon {
+    color: red;
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+}
+
+.btn{
+    display: flex;
+}
+.btn i{
+    font-size: 24px;
+    color: wheat;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.btn :hover{
+    color: antiquewhite;
+}
+.home{
+    padding-top: 95px;
+}
+.home-container{
+    width: 100%;
+    min-height: 640px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background:antiquewhite;
+}
+.home-container img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+ .home-text{
+    padding-left: 5px;
+    border-radius: 2px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: black;
+}
+.play{
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 2px;
+}
+.play i{
+    text-align: center;
+    color: #A51518;
+}
+.ptext{
+    font-size: 1rem;
+    color: #A51518;
+    font-weight: 400;
+    text-align: center;
+}
+/*MCU*/
+.heading{
+   display: flex; 
+   align-items: center;
+   justify-content: space-between;
+   padding: 8px 14px ;
+   margin-bottom: 2rem;
+
+}
+
+.heading-title{
+    font-size: 35px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+
+}
+.movie-box{
+    position: relative;
+    overflow: hidden;
+}
+.movie-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+}
+.movie-box .box-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 14px;
+    background: linear-gradient(8deg,hsl(240 17% 14% / 14%) 14%
+    hsl(240 17% 14% / 14%) 14%);    
+}
+.box-text ,span, .bx{
+    color: aliceblue;
+}
+
+.bx{
+    font-size: 30px;
+}
+
+.box-text{
+ background-color: rgb(169, 169, 169 ,0.5);
+}
+
+.swiper-btn{
+    display: flex;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+ position: static !important;
+ margin: 0 0 0 10px !important;
+
+}
+.swiper-button-next::after, 
+.swiper-button-prev::after{
+color: coral;
+font-size: 18px !important;
+font-weight: 500;
+}
+.avengers-container{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,auto));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.avengers-container .box{
+    position: relative;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+.avengers-container img{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 0.5rem;    
+}
+.avengers-container .box h4{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0.5rem 0 0.5rem;
+
+}
+.footer{
+    padding-top: 30px;
+    max-width: 968px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.social i{
+    font-size: 24px;
+    justify-content: space-evenly;
+    column-gap: 0.5rem;
+    color: navy;
+}
+.social a :hover{
+    color: #034A78;
+}
+.footer h3{
+    color: #A51518;
+}
+/*Play page*/
+.play-container{
+    padding-top: 60px;
+    position: relative;
+    min-height: 540px;
+    margin: 2rem 1rem !important;
+    border: 1px solid whitesmoke;
+    box-shadow: 2px 2px 1px 2px whitesmoke;
+}
+.play-img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.play-text{
+    margin: 7px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+.play-text h2{
+    font-size: 2rem;
+}
+.rating i{
+    font-size: 24px;
+    color: #034A78;
+    padding-bottom: 3px;
+    padding-left: 5px;
+}
+.tags span{
+    font-size: 0.8rem;
+    color: #034A78;
+}
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: hsl(234 10% 20% /60%);
+    z-index: 400;
+    margin-top: 3rem !important;
+}
+.video-container.show-video {
+    display: initial;
+}
+.video-box{
+ position: relative;
+ width: 100%;
+}
+.video-box #myvideo{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.close-video{
+   position: absolute;
+   top: 1rem;
+   right: 0;
+   font-size: 30px;
+   color: #034A78; 
+}
+.about-movie{
+    margin: 5px;
+}
+.cast-title{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+.cast{
+    margin: 4px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,150px));
+    gap: 0.5rem;
+}
+.cast-img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+
+}
+.download{
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+}
+download-title{
+margin: 1.6rem 0;
+font-weight: 500;
+}
+.d-link{
+    display: flex;
+    column-gap: 2rem;
+    padding-top: 10px;
+}
+.d-link a{
+    background-color: #A51518;
+    padding: 4px;
+    border-radius: 2px;
+}
+.d-link a:hover{
+    background-color: bisque;
+}
+
+.copyright i{
+    font-size: 20px;
+    margin-right: 1rem;
+}
+.copyright{
+    padding: 20px;
+    text-align: center;
+    background: rgb(0, 0, 0,0.5);
+}
+/*responsive*/
+@media (max-width: 1058px){
+    header{
+     padding: 16px 60px;
+    } 
+    section{
+     padding: 50px 60px;
+    }
+    .home-text h1{
+     font-size: 2.4rem;
+    }
+ }
+ @media (max-width: 900px){
+    header{
+     padding: 12px 4%;
+    } 
+    #menu-icon{
+        display: initial;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar{
+        position:absolute ;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.4rem;
+        padding: 50px;
+        transition: 0.3s;
+        text-align: start;
+        background-color: rgb(245, 245, 220,0.7);
+        box-shadow: 2px 2px 0 1px #034A78;
+    }
+    .navbar a{
+        color: black;
+    }
+   .navbar a:hover{
+      border-bottom: 1px solid #A51518;
+   }
+      .navbar a::after{
+        display: none;
+      }
+   .navbar.active{
+    top: 100%;
+   }
+}
+@media (max-width: 774px){
+    header{
+     padding: 12px 4%;
+    } 
+    #menu-icon{
+        display: initial;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar{
+        position:absolute ;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.4rem;
+        padding: 50px;
+        transition: 0.3s;
+        text-align: start;
+        background-color: rgb(245, 245, 220,0.7);
+        box-shadow: 2px 2px 0 1px #034A78;
+    }
+    .navbar a{
+        color: black;
+    }
+   .navbar a:hover{
+      border-bottom: 1px solid #A51518;
+   }
+      .navbar a::after{
+        display: none;
+      }
+   .navbar.active{
+    top: 100%;
+   }
+}
+
+@media (max-width: 500px){
+    header{
+     padding: 12px 4%;
+    } 
+    #menu-icon{
+        display: initial;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar{
+        position:absolute ;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.4rem;
+        padding: 50px;
+        transition: 0.3s;
+        text-align: start;
+        background-color: rgb(245, 245, 220,0.7);
+        box-shadow: 2px 2px 0 1px #034A78;
+    }
+    .navbar a{
+        color: black;
+    }
+   .navbar a:hover{
+      border-bottom: 1px solid #A51518;
+   }
+      .navbar a::after{
+        display: none;
+      }
+   .navbar.active{
+    top: 100%;
+   }
+}
+@media (max-width: 360px){
+    header{
+     padding: 12px 4%;
+    } 
+    #menu-icon{
+        display: initial;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar{
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.4rem;
+        padding: 50px;
+        transition: 0.3s;
+        text-align: start;
+        background-color: rgb(245, 245, 220,0.7);
+        box-shadow: 2px 2px 0 1px #034A78;
+    }
+    .navbar a{
+        color: black;
+    }
+   .navbar a:hover{
+      border-bottom: 1px solid #A51518;
+   }
+      .navbar a::after{
+        display: none;
+      }
+   .navbar.active{
+    top: 100%;
+   }
+}
